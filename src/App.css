@@ -1,38 +1,158 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+html {
+  background: #fcfcfc;
+}
+
+.container-main input[type="text"] {
+  height: 30px;
+}
+
+.container-main select {
+  height: 30px;
+  letter-spacing: 1px;
+  padding-inline: 10px;
+}
+
+header {
+  display: flex;
+  gap: 10px;
+  margin-top: 100px;
+  background-color: #11b9b9;
+  color: #ffffff;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 30px;
+}
+
+header button {
+  background-color: #1b72e8;
+  color: white;
+  border: none;
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+header button:hover {
+  background-color: darkblue;
+}
+
+select .status {
+  height: 26px;
+}
+
+header select:hover {
+  cursor: pointer;
+}
+
+header input[type="date"]:hover {
+  cursor: pointer;
+}
+
+table {
+  width: 70%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+th {
+  position: relative;
+}
+
+th::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 1.5px;
+  background-color: #ccc;
+}
+
+table td {
+  padding: 15px;
+  position: relative;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+td::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1.5px;
+  background-color: #ccc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+table tr:nth-child(odd) {
+  background-color: #f2f2f2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+
+table i {
+  cursor: pointer;
+}
+
+table button {
+  background-color: #1b7246;
   color: white;
+  border: none;
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 80px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+table .delete-btn {
+  background-color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+table .save-btn {
+  background-color: orange;
+}
+
+table .delete-btn:hover {
+  background-color: darkred;
+}
+
+table .update-btn:hover {
+  background-color: darkblue;
+}
+
+table .save-btn:hover {
+  background-color: darkgoldenrod;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
 }
